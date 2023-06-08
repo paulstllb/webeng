@@ -1,0 +1,68 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  
+  .points {
+    text-align: left;
+  }
+  
+  .pointTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .pointList {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.8);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  .content {
+    animation: fadeIn 1s ease-out;
+    animation-fill-mode: forwards;
+  }
+  
+  .title,
+  .description,
+  .points {
+    animation: scaleIn 2s ease-out;
+    animation-fill-mode: forwards;
+  }
+  
