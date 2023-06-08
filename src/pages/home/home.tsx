@@ -24,7 +24,7 @@ export default function Home() {
             <li>evt Docker</li>
             
           </ul>
-        <h4 style={{marginTop:"4vm"}}> mit einem Klick auf den oberen rechten Strich könne sie die Navigation schließen oder öffnen</h4>
+        <h4 style={{marginTop:"6vm"}}> mit einem Klick auf den oberen rechten Strich könne sie die Navigation schließen oder öffnen</h4>
         </div>
       </animated.div>
     </div>
