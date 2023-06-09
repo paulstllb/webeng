@@ -35,7 +35,7 @@ function RSSFeed() {
           'https://www.tagesschau.de/api2/news/?regions=1&ressort=inland'
         );
         const data = await response.json();
-
+        
         setTagesschauItems(data.news);
       } catch (error) {
         console.error('Fehler beim Abrufen des Tagesschau-Feeds:', error);
@@ -81,7 +81,7 @@ function RSSFeed() {
             <div
               className={styles['news-image']}
               style={{
-                backgroundImage: `url(${item.teaserImage.imageVariants['1x1-144']})`,
+                backgroundImage: `url(${item.teaserImage.imageVariants['1x1-840']})`,
               }}
             />
             <h3 className={styles['news-title']}>{item.title}</h3>
@@ -98,10 +98,12 @@ function RSSFeed() {
             key={index}
             onClick={() => openURL(item.url)}
           >
+            
             <div
               className={styles['news-image']}
-              style={{ backgroundImage: `url(${item.urlToImage})` }}
+              style={{ backgroundImage: `url(${item.urlToImage} || https://upload.wikimedia.org/wikipedia/commons/3/32/Telefunken_FuBK_test_pattern.svg})`  }}
             />
+           
             <h3 className={styles['news-title']}>{item.title}</h3>
             <p className={styles['news-first-sentence']}>{item.description}</p>
           </div>

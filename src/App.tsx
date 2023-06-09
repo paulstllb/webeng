@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Outlet, Routes, BrowserRouter, Route } from "react-router-dom";
 import Home from './pages/home/home';
 import CanvasDraw from './pages/canvasdraw/canvasdraw';
@@ -75,6 +75,9 @@ function Main() {
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
+  useEffect(() => {
+    document.title = 'DHBW Klausur';
+  }, []);
   return <div className='vstack flex-between' style={{ minHeight: '96vh' }}>
     <main>
       <Loader />
