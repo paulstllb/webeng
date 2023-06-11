@@ -25,7 +25,7 @@ type NewsAPIResponse = {
 };
 
 
-//Tagesschau Fetch
+//Tagesschau
 function RSSFeed() {
   const [tagesschauItems, setTagesschauItems] = useState<NewsItem[]>([]);
   const [newsAPIItems, setNewsAPIItems] = useState<NewsAPIResponse['articles']>([]);
@@ -52,6 +52,12 @@ function RSSFeed() {
   useEffect(() => {
     const fetchNewsAPI = async () => {
       try {
+        //Versuch API ins Backend zubekommen
+        //dotenv.config();
+        //const apiKey = process.env.API_KEY;
+        //console.log(apiKey);
+
+        
         //API KEy sollte im BAckend sein konnte wegen mangelnder Zeit nicht mehr implemntiert werdeb
         const apiKey = '99eda33ee1c640fc97286eaefa2d06c6';
         const apiUrl = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;
