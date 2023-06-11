@@ -1,15 +1,23 @@
 location button weg                             check
-desgin änder allgeimein hintergund etc       
+desgin änder allgeimein hintergund etc          check     
 chatrs farbe ändern                             check
-Wetter boxen ändern 
-
-
-allgeimein johnnanes andrrafe weg 
-404 anders
+Wetter boxen ändern                             check
 
 
 todo:
-    Title und Emblem ändern
-    Wenn möglich Wetter schöner
-    Docker anschauen
-    
+    Weather   
+
+    RSS-Feed    
+                APIKEY verstecken
+
+    Canvas      als pop up und anschließendem anzeigen des Bildes
+
+Doku    React Teil mit Hilfe von ChatGPT
+        Einsetzen von Bild
+        Docker Link einsetzen
+
+Diese Datei löschen // Github öffentlich 
+
+docker: docker build -t paulstllb/web:1.0 .
+        docker image save -o paulstllbweb.tar mit sha
+docker run -p 5000:5000 X

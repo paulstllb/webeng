@@ -1,14 +1,17 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Styles from "./canvasdraw.module.css";
 
 export default function CanvasDraw() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [showCanvas, setShowCanvas] = useState(false);
+  const [canvasImage, setCanvasImage] = useState("");
+
   let isDrawing = false;
   let context: CanvasRenderingContext2D | null = null;
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    if (canvas) {
+    if (canvas && showCanvas) {
       context = canvas.getContext("2d");
       if (context) {
         context.lineWidth = 2;
@@ -31,7 +34,7 @@ export default function CanvasDraw() {
     return () => {
       window.removeEventListener("resize", resizeCanvas);
     };
-  }, []);
+  }, [showCanvas]);
 
   const startDrawing = (e: React.MouseEvent<HTMLCanvasElement> | React.TouchEvent<HTMLCanvasElement>) => {
     e.preventDefault();
@@ -89,28 +92,57 @@ export default function CanvasDraw() {
     context.fillRect(0, 0, canvasRef.current.width, canvasRef.current.height);
   };
 
+  const handleCanvasToggle = () => {
+    if (showCanvas) {
+      const canvas = canvasRef.current;
+      if (canvas) {
+        setCanvasImage(canvas.toDataURL("image/png"));
+      }
+    } else {
+      setCanvasImage("");
+    }
+    setShowCanvas(!showCanvas);
+  };
+
   return (
     <div className={Styles.canvasContainer}>
-      <canvas
-        ref={canvasRef}
-        onMouseDown={startDrawing}
-        onMouseMove={draw}
-        onMouseUp={stopDrawing}
-        onMouseOut={stopDrawing}
-        onTouchStart={startDrawing}
-        onTouchMove={draw}
-        onTouchEnd={stopDrawing}
-        onTouchCancel={stopDrawing}
-        className={Styles.canvas}
-      />
-      <div className={Styles.buttonContainer}>
-        <button style={{marginRight:"10px"}} onClick={downloadImage}>
-          Bild herunterladen
+      {!showCanvas && (
+        <button onClick={handleCanvasToggle}>
+          Unterschrift zeichnen 
         </button>
-        <button onClick={clearCanvas}>
-          Canvas löschen
-        </button>
-      </div>
+      )}
+      {showCanvas && (
+        <div>
+          <canvas
+            ref={canvasRef}
+            onMouseDown={startDrawing}
+            onMouseMove={draw}
+            onMouseUp={stopDrawing}
+            onMouseOut={stopDrawing}
+            onTouchStart={startDrawing}
+            onTouchMove={draw}
+            onTouchEnd={stopDrawing}
+            onTouchCancel={stopDrawing}
+            className={Styles.canvas}
+          />
+          <div className={Styles.buttonContainer}>
+            <button style={{ marginRight: "10px" }} onClick={downloadImage}>
+              Bild herunterladen
+            </button>
+            <button onClick={clearCanvas}>
+              Canvas löschen
+            </button>
+            <button onClick={handleCanvasToggle} style={{marginLeft:"5px"}}>
+              Unterschrift speichern 
+            </button>
+          </div>
+        </div>
+      )}
+      {canvasImage && (
+        <div>
+          <img src={canvasImage} alt="Canvas" />
+        </div>
+      )}
     </div>
   );
 }
