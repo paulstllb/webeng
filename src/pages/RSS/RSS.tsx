@@ -24,6 +24,8 @@ type NewsAPIResponse = {
   }[];
 };
 
+
+//Tagesschau Fetch
 function RSSFeed() {
   const [tagesschauItems, setTagesschauItems] = useState<NewsItem[]>([]);
   const [newsAPIItems, setNewsAPIItems] = useState<NewsAPIResponse['articles']>([]);
@@ -45,6 +47,8 @@ function RSSFeed() {
     fetchTagesschauFeed();
   }, []);
 
+
+  //News API Fetch
   useEffect(() => {
     const fetchNewsAPI = async () => {
       try {
@@ -72,6 +76,8 @@ function RSSFeed() {
     window.open(url, '_blank');
   };
 
+
+  //Anzeigen der Wetter Daten
   return (
     <div>
       <div className={`${styles['news-container']} ${styles['tagesschau-container']}`}>
@@ -98,10 +104,9 @@ function RSSFeed() {
             key={index}
             onClick={() => openURL(item.url)}
           >
-            
             <div
               className={styles['news-image']}
-              style={{ backgroundImage: `url(${item.urlToImage} || https://upload.wikimedia.org/wikipedia/commons/3/32/Telefunken_FuBK_test_pattern.svg})`  }}
+              style={{ backgroundImage: `url(${item.urlToImage}})`  }}
             />
            
             <h3 className={styles['news-title']}>{item.title}</h3>
