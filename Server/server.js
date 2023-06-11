@@ -12,7 +12,7 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../build', 'index.html'));
 });
 
-// Server starten
+// Server startennn
 app.listen(port, () => {
   console.log(`Server läuft auf Port ${port}`);
 });
