@@ -56,7 +56,7 @@ function RSSFeed() {
         //dotenv.config();
         //const apiKey = process.env.API_KEY;
         //console.log(apiKey);
-
+        const key = process.env.REACT_APP_NOT_SECRET_CODE;
         
         //API KEy sollte im BAckend sein konnte wegen mangelnder Zeit nicht mehr implemntiert werdeb
         const apiKey = '99eda33ee1c640fc97286eaefa2d06c6';
