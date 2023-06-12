@@ -1,16 +1,10 @@
-todo:
-    Weather   
+s
 
-    RSS-Feed    
-                APIKEY verstecken
-
-    Canvas      als pop up und anschließendem anzeigen des Bildes
-
-Doku    React Teil mit Hilfe von ChatGPT
+Doku    
         Einsetzen von Bild
         Docker Link einsetzen
 
-Diese Datei löschen // Github öffentlich 
+Diese Datei löschen 
 
 docker: docker build -t paulstllb/web:1.0 .
         docker image save -o paulstllbweb.tar mit sha

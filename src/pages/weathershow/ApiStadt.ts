@@ -13,7 +13,7 @@ export async function fetchWeatherData(latidude: string, longitude: string) {
 
 
  
-//Die Funktion "transformWeatherData" nimmt Wetterdaten im Format "WeatherDataApi" entgegen und
+//Die Funktionx "transformWeatherData" nimmt Wetterdaten im Format "WeatherDataApi" entgegen und
 //transformiert sie in eine gruppierte Form, die "TransformedWeatherDataGrouped[]" zurückgibt.
 export function transformWeatherData(data: WeatherDataApi): TransformedWeatherDataGrouped[] {
      /*
