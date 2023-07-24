@@ -1,46 +1,72 @@
-# Getting Started with Create React App
+# Web Engineering Abgabe
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Dieses Repository enthält die Abgabe für das Web Engineering Projekt.
 
-## Available Scripts
+## Herunterladen und Installation
 
-In the project directory, you can run:
+### Möglichkeit 1: GitHub
 
-### `npm start`
+- Laden Sie das Repository von GitHub herunter: https://github.com/paulstllb/webeng (nicht empfohlen, nur für Codeansicht, Server nicht enthalten)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Möglichkeit 2: ZIP-Datei
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Laden Sie die ZIP-Datei aus der finalen Abgabe herunter.
 
-### `npm test`
+### Installation von Node.js
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Stellen Sie sicher, dass Node.js auf Ihrem Computer installiert ist, damit die erforderlichen Pakete heruntergeladen werden können.
 
-### `npm run build`
+### Abhängigkeiten installieren
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Führen Sie den Befehl "npm i" im Terminal aus, um alle Abhängigkeiten zu installieren.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Server starten
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Navigieren Sie im Terminal zur Server-Datei und geben Sie den Befehl "node Server.js" ein, um den Server zu starten. Eine Nachricht zeigt Ihnen an, auf welchem Port der Server läuft.
 
-### `npm run eject`
+## Anwendung aufrufen
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Öffnen Sie Ihren Browser und geben Sie die Adresse "http://localhost:3001" ein, um die Anwendung aufzurufen.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ODER
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Docker Installation
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Folgen Sie dem Link, um die .tar-Datei herunterzuladen, und verwenden Sie den entsprechenden Schlüssel, um den Container zu entpacken. 
 
-## Learn More
+- Link zur .tar-Datei: https://dhbwstg-my.sharepoint.com/:u:/g/personal/inf21105_lehre_dhbw-stuttgart_de/EZI-9UfFeApAhF4BWwjqdwQBjSTUM7MO03itM1lybrfZCw?e=XoHXpQ mit Inf-Adresse öffnen
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Führen Sie die folgenden Befehle aus:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- "docker load --input paulstllb-6226582.tar"
+- "docker run -p 3001:3001 X"
+
+Ersetzen Sie "X" durch den Schlüssel (X = sha256:0ed084b9723a0b05df7498296ec111e76147c1f39548f1f5bcaa1507f934372d).
+
+Die Anwendung sollte nun aufgerufen werden, indem Sie "http://localhost:3001" im Browser eingeben.
+
+## Bewertung
+
+Folgende Punkte werden bewertet:
+- Die Benutzung von React (3 Punkte)
+- Die Anzeige von Wetterdaten (2 Punkte)
+- Der Canvas für Unterschriften (1 Punkt)
+- Der RSS-Feed (1 Punkt)
+- Docker (1 Punkt)
+- Kein natives JavaScript (1 Punkt)
+
+Installationshilfe und Bewertungsleistung erfolgen auch über Docker. Die maximale Punktzahl beträgt 9 Punkte, was einem Projektfortschritt von 85% entspricht. Die JavaScript Übung 2 wird ebenfalls abgegeben, sodass insgesamt 100% der erreichbaren Punkte erreicht werden können.
+
+## Pages
+
+Eine Beschreibung der Seitenstruktur und Funktionalität finden Sie in der Datei "PAGES.md".
+
+## API
+
+Eine Übersicht über die verwendeten APIs finden Sie in der Datei "API.md".
+
+## Hinweise zur Bewertung
+
+Bitte beachten Sie die Bewertungskriterien für die einzelnen Punkte und Funktionalitäten.
+
+Viel Erfolg mit der Abgabe!
