@@ -4,13 +4,9 @@ Dieses Repository enthält die Abgabe für das Web Engineering Projekt.
 
 ## Herunterladen und Installation
 
-### Möglichkeit 1: GitHub
+### Möglichkeit: GitHub
 
 - Laden Sie das Repository von GitHub herunter: https://github.com/paulstllb/webeng (nicht empfohlen, nur für Codeansicht, Server nicht enthalten)
-
-### Möglichkeit 2: ZIP-Datei
-
-- Laden Sie die ZIP-Datei aus der finalen Abgabe herunter.
 
 ### Installation von Node.js
 
@@ -30,20 +26,6 @@ Navigieren Sie im Terminal zur Server-Datei und geben Sie den Befehl "node Serve
 
 ODER
 
-## Docker Installation
-
-Folgen Sie dem Link, um die .tar-Datei herunterzuladen, und verwenden Sie den entsprechenden Schlüssel, um den Container zu entpacken. 
-
-- Link zur .tar-Datei: https://dhbwstg-my.sharepoint.com/:u:/g/personal/inf21105_lehre_dhbw-stuttgart_de/EZI-9UfFeApAhF4BWwjqdwQBjSTUM7MO03itM1lybrfZCw?e=XoHXpQ mit Inf-Adresse öffnen
-
-Führen Sie die folgenden Befehle aus:
-
-- "docker load --input paulstllb-6226582.tar"
-- "docker run -p 3001:3001 X"
-
-Ersetzen Sie "X" durch den Schlüssel (X = sha256:0ed084b9723a0b05df7498296ec111e76147c1f39548f1f5bcaa1507f934372d).
-
-Die Anwendung sollte nun aufgerufen werden, indem Sie "http://localhost:3001" im Browser eingeben.
 
 ## Bewertung
 
